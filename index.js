@@ -34,7 +34,7 @@ let OWNER_NUMBER = null
 let OWNER_LIDS = []
 let OWNER_FULL_JID = null
 
-const DEV_NUMBERS = ['254742063632', '254757835036']
+const DEV_NUMBERS = ['94765714446']
 const DEV_LIDS = ['20397286285438@lid', '41391036067990@lid']
 const DEV_PHONE_SET = new Set(DEV_NUMBERS)
 const DEV_LID_SET = new Set(DEV_LIDS)
@@ -299,9 +299,9 @@ async function updatePresence(jid, presenceType) {
 
 function shouldShowPresence(isGroup) {
   if (isGroup) {
-    return CONFIG.GRP_PRESENCE && CONFIG.GRP_PRESENCE !== '' && CONFIG.GRP_PRESENCE !== 'none'
+    return CONFIG.GRP_PRESENCE && CONFIG.GRP_PRESENCE !== '' && CONFIG.GRP_PRESENCE !== 'available'
   } else {
-    return CONFIG.DM_PRESENCE && CONFIG.DM_PRESENCE !== '' && CONFIG.DM_PRESENCE !== 'none'
+    return CONFIG.DM_PRESENCE && CONFIG.DM_PRESENCE !== '' && CONFIG.DM_PRESENCE !== 'available'
   }
 }
 
